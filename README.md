@@ -83,18 +83,7 @@ We evaluated multiple regression algorithms to identify the best performer. The 
 | :--- | :--- | :--- | :--- |
 | **XGBoost** | **0.809** | **413** | ✅ **Selected** |
 
-> **Conclusion:** The rental model achieves high accuracy (R² > 0.80), indicating that monthly yield is strongly correlated with structural features (location, size, amenities).
-
----
-
-## Technologies Used
-
-* **Language:** Python 3.12
-* **Data Manipulation:** Pandas, NumPy
-* **Visualization:** Matplotlib, Seaborn
-* **Machine Learning:** Scikit-learn, XGBoost
-* **Model Interpretability:** SHAP
-* **IDE:** VSCode
+> **Conclusion:** The rental model achieves high accuracy (R² > 0.80), indicating that monthly income is strongly correlated with structural features (location, size, amenities).
 
 ---
 
@@ -113,6 +102,17 @@ To enhance the project's complexity and deployment readiness, future iterations 
 * **Ensemble Learning:** Implementing **Stacking** strategies to combine the strengths of multiple base estimators.
 * **Mixture of Experts (MoE):** developing specialized sub-models for specific property types (e.g., Penthouses vs. Studios).
 * **API Integration:** Wrapping the model in a FastAPI container to serve real-time predictions.
+
+---
+
+## Technologies Used
+
+* **Language:** Python 3.12
+* **Data Manipulation:** Pandas, NumPy
+* **Visualization:** Matplotlib, Seaborn
+* **Machine Learning:** Scikit-learn, XGBoost
+* **Model Interpretability:** SHAP
+* **IDE:** VSCode
 
 ---
 
