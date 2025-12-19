@@ -8,7 +8,7 @@
 
 This project implements an end-to-end Machine Learning pipeline to analyze real estate profitability. By training models on historical property attributes, the system predicts fair market values for both sales and rentals to assist in investment decision-making.
 
-The core objective is to calculate the **Break-Even Point (ROI)** for potential investments by combining the outputs of two distinct predictive models:
+The core objective is to calculate the **Break-Even Point (BEP)** for potential investments by combining the outputs of two distinct predictive models:
 1.  **Purchase Price Predictor:** Estimates the fair market buy price based on property features.
 2.  **Rental Price Predictor:** Estimates the potential monthly yield.
 
@@ -61,12 +61,28 @@ To rigorously evaluate the performance of our models, we utilized the following 
     * *Significance:* Measures the average magnitude of the errors in Euros. Unlike MAE, RMSE penalizes larger errors more heavily, which is crucial in financial forecasting where large deviations carry higher risk.
 
 ### Results
-*(Current model performance on the test set)*
 
-| Model | Target | R² Score | RMSE (€) |
+We evaluated multiple regression algorithms to identify the best performer. The tables below summarize the performance on the **Test Set**.
+
+### Purchase Price Prediction
+*Target: Total Sale Price (€)*
+
+| Model | R² Score | RMSE (€) | Status |
 | :--- | :--- | :--- | :--- |
-| **XGBoost** | Purchase Price | *[Insert Value]* | *[Insert Value]* |
-| **Random Forest** | Rental Price | *[Insert Value]* | *[Insert Value]* |
+| **Bagging Regressor** | 0.016 | 26,678 | ❌ Discarded |
+| **Random Forest** | 0.045 | 24,049 | ❌ Discarded |
+| **XGBoost** | **0.443** | **17,556** | ✅ **Selected** |
+
+> **Insight:** The purchase market shows higher variance and is likely influenced by external macroeconomic factors or sentimental values not present in the dataset, making it harder to model than rental prices.
+
+### Rental Price Prediction
+*Target: Monthly Rent (€)*
+
+| Model | R² Score | RMSE (€) | Status |
+| :--- | :--- | :--- | :--- |
+| **XGBoost** | **0.809** | **413** | ✅ **Selected** |
+
+> **Conclusion:** The rental model achieves high accuracy (R² > 0.80), indicating that monthly yield is strongly correlated with structural features (location, size, amenities).
 
 ---
 
