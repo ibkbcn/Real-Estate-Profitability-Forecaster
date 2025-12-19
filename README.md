@@ -6,25 +6,26 @@
 
 ## Project Overview
 
-This project implements an end-to-end Machine Learning pipeline to analyze real estate profitability. By training models on historical property attributes, the system predicts fair market values for both sales and rentals to assist in investment decision-making.
+This project implements an end-to-end Machine Learning pipeline to analyze real estate profitability. 
 
 The core objective is to calculate the **Break-Even Point (BEP)** for potential investments by combining the outputs of two distinct predictive models:
-1.  **Purchase Price Predictor:** Estimates the fair market buy price based on property features.
-2.  **Rental Price Predictor:** Estimates the potential monthly yield.
 
-By combining these predictions, the system approximates the time required to recover the initial investment.
+* **Purchase Price Predictor:** Estimates the fair market buy price based on property features.
+* **Rental Price Predictor:** Estimates the potential monthly rental income.
+
+By integrating these predictions, the system approximates the time required to recover the initial investment.
 
 ---
 
 ## Dataset
 
-**Source:** Real Estate Market Sample
-**Context:** The project utilizes two distinct datasets to train the respective regression models independently. These datasets represent a snapshot of the Spanish real estate market.
+**Source:** Barcelona Real Estate Market Sample
+**Context:** The project utilizes two distinct datasets to train the respective regression models independently. These datasets represent a snapshot of the Barcelona real estate market.
 
 | Dataset | Sample Size | Target Variable | Description |
 | :--- | :--- | :--- | :--- |
 | **Sale Flats** | 5,847 rows | `Purchase Price` (€) | Training data for property valuation features. |
-| **Rent Flats** | 8,502 rows | `Monthly Rent` (€) | Training data for estimating potential rental yields. |
+| **Rent Flats** | 8,502 rows | `Monthly Rent` (€) | Training data for estimating potential rental income. |
 
 > **Note:** The data has been anonymized for privacy and compliance reasons. The project focuses on the *methodology* of price estimation rather than real-time market monitoring.
 
@@ -73,7 +74,7 @@ We evaluated multiple regression algorithms to identify the best performer. The 
 | **Random Forest** | 0.045 | 24,049 | ❌ Discarded |
 | **XGBoost** | **0.443** | **17,556** | ✅ **Selected** |
 
-> **Insight:** The purchase market shows higher variance and is likely influenced by external macroeconomic factors or sentimental values not present in the dataset, making it harder to model than rental prices.
+> **Insight:** The purchase market shows higher variance and is likely influenced by external macroeconomic factors not present in the dataset. Specifically, **an R² of 0.443 implies that our model successfully captures nearly 45% of the price variability based solely on physical attributes**, while the remaining variance is likely driven by subjective human factors (e.g., renovation quality, seller urgency) or unobserved micro-location trends.
 
 ### Rental Price Prediction
 *Target: Monthly Rent (€)*
@@ -105,7 +106,7 @@ While the model performs robustly based on structural features, it is subject to
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 To enhance the project's complexity and deployment readiness, future iterations will include:
 
