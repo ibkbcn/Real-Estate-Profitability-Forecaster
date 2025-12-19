@@ -27,8 +27,6 @@ By integrating these predictions, the system approximates the time required to r
 | **Sale Flats** | 5,847 rows | `Purchase Price` (€) | Training data for property valuation features. |
 | **Rent Flats** | 8,502 rows | `Monthly Rent` (€) | Training data for estimating potential rental income. |
 
-> **Note:** The data has been anonymized for privacy and compliance reasons. The project focuses on the *methodology* of price estimation rather than real-time market monitoring.
-
 ---
 
 ## Methodology
