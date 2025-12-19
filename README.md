@@ -116,6 +116,6 @@ To enhance the project's complexity and deployment readiness, future iterations 
 
 ---
 
-## ⚖️ Disclaimer
+## Disclaimer
 
 This project is for **educational and portfolio purposes only**. The dataset used is a static sample provided for analysis and does not reflect real-time market data. This tool is intended to demonstrate Machine Learning workflows (Data Cleaning, PCA, Modeling) and should not be used for actual financial investment advice.
