@@ -44,7 +44,7 @@ To ensure robust predictions and minimize overfitting, several strategic decisio
 * **Explainability:** Integrated **SHAP** (SHapley Additive exPlanations) values to interpret feature importance globally and locally.
 
 ### 3. Modeling Strategy
-We employed a variety of regression techniques to maximize accuracy:
+A variety of regression techniques were employed to maximize accuracy:
 * **Bagging Regressors**
 * **Random Forest**
 * **XGBoost** (Extreme Gradient Boosting)
@@ -53,7 +53,7 @@ We employed a variety of regression techniques to maximize accuracy:
 
 ## Model Evaluation
 
-To rigorously evaluate the performance of our models, we utilized the following metrics:
+To rigorously evaluate the performance of the models, the following metrics were utilized:
 
 * **R² (Coefficient of Determination):**
     * *Significance:* Indicates the proportion of the variance in the dependent variable (Price) that is predictable from the independent variables (Features). A higher score implies a better fit.
@@ -62,7 +62,7 @@ To rigorously evaluate the performance of our models, we utilized the following 
 
 ### Results
 
-We evaluated multiple regression algorithms to identify the best performer. The tables below summarize the performance on the **Test Set**.
+Multiple regression algorithms were evaluated to identify the best performer. The tables below summarize the performance on the Test Set.
 
 ### Purchase Price Prediction
 *Target: Total Sale Price (€)*
