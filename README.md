@@ -1,9 +1,5 @@
 # Real Estate Profitability Forecaster
 
-![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
-![Status](https://img.shields.io/badge/Status-Prototype-yellow.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-
 ## Project Overview
 
 This project implements an end-to-end Machine Learning pipeline to analyze real estate profitability. 
@@ -113,8 +109,3 @@ To enhance the project's complexity and deployment readiness, future iterations 
 * **Model Interpretability:** SHAP
 * **IDE:** VSCode
 
----
-
-## Disclaimer
-
-This project is for **educational and portfolio purposes only**. The dataset used is a static sample provided for analysis and does not reflect real-time market data. This tool is intended to demonstrate Machine Learning workflows (Data Cleaning, PCA, Modeling) and should not be used for actual financial investment advice.
